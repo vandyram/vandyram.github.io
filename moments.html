@@ -28,7 +28,6 @@
             <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
             <!-- Add Button helper (this is optional) -->
             <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css?v=1.0.5" />
-
         </head>
         <body>
             <nav>
@@ -43,6 +42,7 @@
                     <div class="col-md-9">
                         <div class="main-content">
                             <h1>Moments Photography</h1>
+                            <div id="loading" class="text-center"></div>
                             <div id="results"></div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <script type="text/javascript">
-                            
+                                        
             </script>
             <!--  JavaScript
             ================================================== -->
@@ -75,27 +75,33 @@
             <!--custom jquery script-->
             <script src="js/script.js"></script>
             <script type="text/javascript">
-                        var apiurl,myresult,apiurl_size,thumbnail_url,original_url;
-                        apiurl = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=8f46789358aa4fb2a33d85606cde2897&photoset_id=72157657942036814&user_id=91735287@N06&format=json&nojsoncallback=1";
-                        $(document).ready(function(){
-                            $.getJSON(apiurl,function(json){
-                                $.each(json.photoset.photo,function(i,myresult){
-                                    apiurl_size = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=8f46789358aa4fb2a33d85606cde2897&photo_id="+myresult.id+"&format=json&nojsoncallback=1";
-                                    
-                                    $.getJSON(apiurl_size,function(size){
-                                        $.each(size.sizes.size,function(i,myresult_size){
-                                            original_url = 'https:\/\/farm' + myresult.farm + '.staticflickr.com\/' + myresult.server +
-                            '\/' + myresult.id + '_' + myresult.secret + '_b.jpg';
-                                            if(myresult_size.width==320){
-                                            $("#results").append('<div class="col-md-4"><div class="box"><a class="fancybox-button" rel="fancybox-button" href="'+original_url+'" ><img src="'+myresult_size.source+'"/></a></div></div');
-                                            }
-                                            
-                                        });
-                                    });
-                                    
-                                });
+                                    var apiurl,myresult,apiurl_size,thumbnail_url,original_url;
+                                    apiurl = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=8f46789358aa4fb2a33d85606cde2897&photoset_id=72157657942036814&user_id=91735287@N06&format=json&nojsoncallback=1";
+                                    $(document).ready(function(){
+                                        $('#loading').html('<img src="img/loading.gif">');
+                                        $("#results").css('visibility: ', 'hidden');
+                                        $.getJSON(apiurl,function(json){
+                                            $.each(json.photoset.photo,function(i,myresult){
+                                                apiurl_size = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=8f46789358aa4fb2a33d85606cde2897&photo_id="+myresult.id+"&format=json&nojsoncallback=1";
+                                                
+                                                $.getJSON(apiurl_size,function(size){
+                                                    $.each(size.sizes.size,function(i,myresult_size){
+                                                        original_url = 'https:\/\/farm' + myresult.farm + '.staticflickr.com\/' + myresult.server +
+                                        '\/' + myresult.id + '_' + myresult.secret + '_b.jpg';
+                                                        if(myresult_size.width==320){
+                                                        $("#results").append('<div class="col-md-4"><div class="box"><a class="fancybox-button" rel="fancybox-button" href="'+original_url+'" ><img src="'+myresult_size.source+'"/></a></div></div');
+                                                        }
+                                                        
+                                                    });
+                                                });
+                                                
+                                            });
+                                        })
+                                            .done(function( json ) {
+                                $("#results").css('visibility: ', 'visible');
+                                $('#loading').css('display', 'none');
                             });
-                        });
+                                    });
             </script>
         </body>
     </html>
