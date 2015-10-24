@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+        <title>Vandyram Photography - Nature photos</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="css/lib/animations.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css">
+        <!-- Custom styles for this template -->
+        <!-- <link href="css/agency.css" rel="stylesheet"> -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+            <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+            <!--[if lt IE 9]><script src="js/lib/ie8-responsive-file-warning.js"></script><![endif]-->
+            <script src="js/lib/ie-emulation-modes-warning.js"></script>
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+            <script src="js/lib/html5shiv.min.js"></script>
+            <script src="js/lib/respond.min.js"></script>
+            <![endif]-->
+            <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+            <!-- Add Button helper (this is optional) -->
+            <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css?v=1.0.5" />
+
+        </head>
+        <body>
+            <nav>
+                <ul class="">
+                    <li><a class="link" href="index.html#home">home</a></li>
+                    <li><a class="link" href="index.html#about">about</a></li>
+                    <li><a class="link" href="index.html#photography">photography</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="main-content">
+                            <h1>Nature Photography</h1>
+                            <div id="results"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sidebar">
+                            <img src="img/profile_pic.jpg" class="img-circle img-responsive aboutme-img" alt="Vandhana's Photo" />
+                            <h4 >about me</h4>
+                            <p>This is me who do some blah blah blah.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                            
+            </script>
+            <!--  JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+            <script src="js/lib/bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+            <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+            <script src="js/lib/wow.min.js"></script>
+            <script src="js/lib/jquery.lettering.js"></script>
+            <script src="js/lib/jquery.fittext.js"></script>
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+            <script src="js/lib/ie10-viewport-bug-workaround.js"></script>
+            <!--custom jquery script-->
+            <script src="js/script.js"></script>
+            <script type="text/javascript">
+            var apiurl,myresult,apiurl_size,thumbnail_url,original_url;
+            apiurl = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=dd6e24f9bd230da26862b01ca8b9700a&photoset_id=72157632982156730&user_id=91776516%40N05&format=json&nojsoncallback=1";
+            $(document).ready(function(){
+                $.getJSON(apiurl,function(json){
+                    $.each(json.photoset.photo,function(i,myresult){
+                        apiurl_size = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=ca370d51a054836007519a00ff4ce59e&photo_id="+myresult.id+"&format=json&nojsoncallback=1";
+                        $.getJSON(apiurl_size,function(size){
+                            $.each(size.sizes.size,function(i,myresult_size){
+                                original_url = 'https:\/\/farm' + myresult.farm + '.staticflickr.com\/' + myresult.server +
+                '\/' + myresult.id + '_' + myresult.secret + '_b.jpg';
+                                if(myresult_size.width==320){
+                                $("#results").append('<div class="col-md-4"><div class="box"><a class="fancybox-button" rel="fancybox-button" href="'+original_url+'" ><img src="'+myresult_size.source+'"/></a></div></div');
+                                }
+                                
+                            });
+                        });
+                        
+                    });
+                });
+            });
+            </script>
+        </body>
+    </html>
