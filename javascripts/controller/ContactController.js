@@ -3,7 +3,7 @@
  */
 
 (function () {
-    app.controller('ContactController', function ($scope) {
+    app.controller('ContactController', function ($scope,  $location) {
         $scope.title = "Contact";
         $scope.phone = "3182439758";
         $scope.twitter = "https://twitter.com/idlyupma";
@@ -12,5 +12,8 @@
         $scope.fivehunpix = "";
         $scope.googleplus = "";
         $scope.mail = "";
+        $scope.isActive = function (viewLocation) {
+            return viewLocation === $location.path();
+        };
     });
 }());

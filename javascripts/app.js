@@ -11,25 +11,26 @@ app.config(function ($routeProvider) {
     $routeProvider
         .when("/nature", {
             templateUrl: "nature.html",
-            controller: "AboutController"
+            controller: "AboutController",
+
         })
         .when("/moment", {
             templateUrl: "moments.html",
-            controller: "ContactController"
+            controller: "ContactController",
         })
         .when("/portraits", {
             templateUrl: "portraits.html",
-            controller: "GalleryController"
+            controller: "GalleryController",
         })
         .when("/home", {
             templateUrl: "home.html",
-            controller: "MainController"
+            controller: "MainController",
         })
         .when("/service", {
             templateUrl: "service.html",
-            controller: "ServiceController"
+            controller: "ServiceController",
         })
-        .otherwise({redirectTo: "/home"});
+        .otherwise({redirectTo: "/nature"});
 
 
 });

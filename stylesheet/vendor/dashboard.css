@@ -43,6 +43,7 @@ body {
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
+    z-index: 10000;
 }
 
 @media (min-width: 768px) {
