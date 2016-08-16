@@ -1,0 +1,237 @@
+/**
+ *  Main CSS 
+ *  @author : Ramakrishnan Sathyavageeswaran
+ */
+body {
+
+}
+
+.wrapper {
+    perspective: 1000px;
+}
+
+.title {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+    font-size: 6em;
+    transform: rotateY(0deg);
+    color: #F2F2F2;
+}
+
+.row-margin {
+    margin-top: 15%;
+    height: 100%;
+}
+
+.nav-bar {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+    font-size: 2.5em;
+    transform: rotateY(10deg);
+}
+
+.main-nav {
+    font-size: 1.2em;
+    margin-left: 40%;
+}
+
+.main-nav a {
+    margin-left: 10px;
+    color: #f9f9f9;
+    text-decoration: none;
+    transition: color .7s ease-in-out;
+}
+
+.main-nav a .fa {
+    color: #f9f9f9;
+}
+
+.main-nav a:hover {
+    color: #EAE160;
+}
+
+.cstm {
+    font-family: 'Fredoka One', cursive;
+}
+
+.justified-gallery a:hover img {
+    transform: scale(1.15);
+}
+
+figure {
+    margin: 0;
+}
+
+.sidebar-nav {
+
+}
+
+.nav-side ul {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.nav-side ul li {
+    padding: 10px 10px 10px 30px;
+    transition: border .5s ease-in;
+}
+
+.nav-side ul li:hover {
+    border-left: 3px solid #EAE160;
+}
+
+.nav li a {
+    position: relative;
+    display: block;
+    padding: 15px 15px 15px 50px;
+    font-size: 12px;
+    color: #eee;
+    border-bottom: 1px solid #dddddd;
+    text-decoration: none;
+    transition: background .5s, box-shadow .5s, color .5s;
+}
+
+.nav li a:before {
+    font: 14px fontawesome;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+
+.nav li:nth-child(1) a:before {
+    content: '\f015';
+}
+
+.nav li:nth-child(2) a:before {
+    content: '\f03e';
+}
+
+.nav li:nth-child(3) a:before {
+    content: '\f03e';
+}
+
+.nav li:nth-child(4) a:before {
+    content: '\f03e';
+}
+
+.nav li:nth-child(5) a:before {
+    content: '\f007';
+}
+
+.nav li:nth-child(6) a:before {
+    content: '\f095';
+}
+
+.nav li a:hover {
+    background: #dddddd;
+    color: #2b2d2f;
+    box-shadow: inset 5px 0 0 #2196f3, inset 6px 0 0 #f7f7f7;
+}
+
+.nav li a.active {
+    box-shadow: inset 5px 0 0 #FFEB3B, inset 6px 0 0 #f7f7f7;
+    background: #dfdfdf;
+    color:#2b2d2f;
+}
+
+.nav li a.active .fa{
+    color: #2b2d2f;
+}
+
+.footer {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 99.5%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    line-height: 30px; /* Vertically center the text there */
+
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.footer ul {
+    margin: 10px;
+}
+.list-inline li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+/*Change icons size here*/
+.social-icons .fa {
+    font-size: 1.3em;
+}
+/*Change icons circle size and color here*/
+.social-icons .fa {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFF;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa{
+    border-radius: 50%;
+}
+.social-icons .fa:hover, .social-icons .fa:active {
+    color: #FFF;
+    -webkit-box-shadow: 1px 1px 3px #333;
+    -moz-box-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333;
+}
+.social-icons.icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}
+.social-icons .fa-flickr{background-color:#FF0084;}
+.social-icons .fa-google-plus,.social-icons .fa-google-plus-square{background-color:#CF3D2E;}
+.social-icons .fa-instagram{background-color:#A1755C;}
+.social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#32CCFE;}
+
+
+.subtitle {
+    margin: 0 0 2em 0;
+}
+.fancy {
+    line-height: 0.5;
+    text-align: center;
+}
+.fancy span {
+    display: inline-block;
+    position: relative;
+}
+.fancy span:before,
+.fancy span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid #FFEB3B;
+    border-top: 1px solid #FFEB3B;
+    top: 0;
+    width: 600px;
+}
+.fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+    text-shadow: 0px 0px 15px rgba(150, 150, 150, 1);
+}
+.fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+}
