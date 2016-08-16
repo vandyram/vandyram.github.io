@@ -5,7 +5,7 @@
 'use strict';
 
 
-(function() {
+(function () {
 
     // VandyPhotography.factory('flickr',function ($http) {
     //     return {

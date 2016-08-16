@@ -1,62 +1,85 @@
 <!DOCTYPE html>
-<html ng-app="VandyPhotography">
+<html ng-app="VandyPhotography" class="no-js">
 <head>
-	<title>Vandyram Photography</title>
+    <title>Vandyram Photography</title>
 
-	<!--vendor Stylesheet -->
-	<link rel="stylesheet" href="stylesheet/vendor/bootstrap.css" >
-	<link rel="stylesheet" href="stylesheet/vendor/bootstrap-theme.css" >
+    <!--vendor Stylesheet -->
+    <link rel="stylesheet" href="stylesheet/vendor/bootstrap.css">
 
-	<!--custom Stylesheet -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="stylesheet/main.css" >
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-	<!-- google font -->
-	<link href='https://fonts.googleapis.com/css?family=Advent+Pro:700,600' rel='stylesheet' type='text/css'>
+    <!--custom Stylesheet -->
+
+    <link rel="stylesheet" href="stylesheet/main.css">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+    <link href="stylesheet/vendor/dashboard.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheet/vendor/justifiedGallery.min.css"/>
 
 
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="images/profile_pic.jpg" class="img-thumbnail" alt="">
+                    <h6 class="display-4 text-xs-center">vandyram</h6>
+                    <h3 class=" cstm text-xs-center">PHOTOGRAPHY</h3>
+                </div>
+            </div>
+            <div class="row sidebar-nav">
+                <div class="">
+                    <ul class='nav'>
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a href="#/moment">Moments</a>
+                        </li>
+                        <li>
+                            <a href="#/nature" class='active'>Nature</a>
+                        </li>
+                        <li>
+                            <a href="#/portraits">Portraits</a>
+                        </li>
+                        <li>
+                            <a>About</a>
+                        </li>
+                        <li>
+                            <a>Contact</a>
+                        </li>
 
-<!--<ul class="nav navbar-nav navbar-right">-->
-	<!--<li><a href="#/home">Home</a></li>-->
-	<!--<li><a href="#/about">About</a></li>-->
-	<!--<li><a href="#/service">Service</a></li>-->
-	<!--<li><a href="#/gallery">Gallery</a></li>-->
-	<!--<li><a href="#/contact">Contact</a></li>-->
-<!--</ul>-->
+                    </ul>
+                </div>
+            </div>
 
-	<div id="page-content-wrapper">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-12 row-margin">
-					<div class="wrapper">
-						<h2 class="title text-center">ThisSample Website</h2>
-						<nav class="nav nav-inline">
-							<a href="#/home">Home</a>
-							<a href="#/about">About</a>
-							<a href="#/service">Service</a>
-							<a href="#/gallery">Gallery</a>
-							<a href="#/contact">Contact</a>
-						</nav>
-					</div>
-
-					<div ng-view></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /#page-content-wrapper -->
+        </div>
+        <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main mainbar">
+            <div ng-view></div>
+        </div>
+    </div>
 
 
+</div>
 
-<script src="javascripts/vendor/jquery-2.2.4.js" ></script>
-<script src="javascripts/vendor/slideout.js" ></script>
+<!-- /#page-content-wrapper -->
 
-<script src="javascripts/vendor/bootstrap.js" ></script>
-<script src="javascripts/vendor/angular.js" ></script>
-<script src="javascripts/vendor/angular-route.js"  ></script>
-<script src="javascripts/vendor/angular-resource.js" ></script>
+
+<script src="javascripts/vendor/jquery-2.2.4.js"></script>
+<script src="javascripts/vendor/tether.min.js"></script>
+<script src="javascripts/vendor/bootstrap.js"></script>
+<script src="javascripts/vendor/angular.js"></script>
+<script src="javascripts/vendor/angular-route.js"></script>
+<script src="javascripts/vendor/angular-resource.js"></script>
 <script src="javascripts/vendor/angular-animate.js"></script>
 
 <script src="javascripts/app.js"></script>
@@ -66,6 +89,8 @@
 <script src="javascripts/controller/GalleryController.js"></script>
 <script src="javascripts/controller/ServiceController.js"></script>
 <script src="javascripts/controller/AboutController.js"></script>
+
+<script src="javascripts/vendor/jquery.justifiedGallery.min.js"></script>
 
 <script src="javascripts/script.js"></script>
 
