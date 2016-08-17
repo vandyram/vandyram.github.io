@@ -85,7 +85,7 @@ figure {
     display: block;
     padding: 15px 15px 15px 50px;
     font-size: 12px;
-    color: #eee;
+    color: #9c9c9c;
     border-bottom: 1px solid #dddddd;
     text-decoration: none;
     transition: background .5s, box-shadow .5s, color .5s;
@@ -140,7 +140,7 @@ figure {
 
 .footer {
     position: absolute;
-    bottom: 45px;
+    bottom: 70px;
     left: 0;
     width: 99.5%;
     /* Set the fixed height of the footer here */
