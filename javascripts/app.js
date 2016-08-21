@@ -6,7 +6,7 @@
 
 var app = angular.module("VandyPhotography", ["ngRoute"]);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider,$locationProvider) {
 
     $routeProvider
         .when("/nature", {
@@ -31,6 +31,8 @@ app.config(function ($routeProvider) {
             controller: "ServiceController",
         })
         .otherwise({redirectTo: "/nature"});
+
+        $locationProvider.html5Mode(true);
 
 
 });
