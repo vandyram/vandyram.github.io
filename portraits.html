@@ -1,52 +1,61 @@
-<div id="basicExample2" class="justified-gallery">
-    <a href="https://farm8.staticflickr.com/7311/9528750895_15c8c24889_c.jpg">
+<div id="portrait" class="justified-gallery">
+    <a class="gallery" href="https://farm8.staticflickr.com/7311/9528750895_15c8c24889_c.jpg">
         <img src="https://farm8.staticflickr.com/7311/9528750895_15c8c24889_z.jpg" alt="">
     </a>
-    <a href="https://farm3.staticflickr.com/2900/13939495007_b7cdd1e02f_c.jpg">
+    <a class="gallery" href="https://farm3.staticflickr.com/2900/13939495007_b7cdd1e02f_c.jpg">
         <img src="https://farm3.staticflickr.com/2900/13939495007_b7cdd1e02f_z.jpg" alt="">
     </a>
-    <a href="https://farm8.staticflickr.com/7371/13939533730_b5d8a79079_c.jpg">
+    <a class="gallery" href="https://farm8.staticflickr.com/7371/13939533730_b5d8a79079_c.jpg">
         <img src="https://farm8.staticflickr.com/7371/13939533730_b5d8a79079_z.jpg" alt="">
     </a>
-    <a href="https://farm3.staticflickr.com/2924/14126460294_dc9d2968ae_c.jpg">
+    <a class="gallery" href="https://farm3.staticflickr.com/2924/14126460294_dc9d2968ae_c.jpg">
         <img src="https://farm3.staticflickr.com/2924/14126460294_dc9d2968ae_z.jpg" alt="">
     </a>
-    <a href="https://farm6.staticflickr.com/5569/13939496209_797ffb3250_c.jpg">
+    <a class="gallery" href="https://farm6.staticflickr.com/5569/13939496209_797ffb3250_c.jpg">
         <img src="https://farm6.staticflickr.com/5569/13939496209_797ffb3250_z.jpg" alt="">
     </a>
-    <a href="https://farm3.staticflickr.com/2863/9528753511_1cfaac8541_c.jpg">
+    <a class="gallery" href="https://farm3.staticflickr.com/2863/9528753511_1cfaac8541_c.jpg">
         <img src="https://farm3.staticflickr.com/2863/9528753511_1cfaac8541_z.jpg" alt="">
     </a>
-    <a href="https://farm6.staticflickr.com/5515/12018543984_22e3a6297a_c.jpg">
+    <a class="gallery" href="https://farm6.staticflickr.com/5515/12018543984_22e3a6297a_c.jpg">
         <img src="https://farm6.staticflickr.com/5515/12018543984_22e3a6297a_z.jpg" alt="">
     </a>
-    <a href="https://farm6.staticflickr.com/5495/9531519428_6720753201_c.jpg">
+    <a class="gallery" href="https://farm6.staticflickr.com/5495/9531519428_6720753201_c.jpg">
         <img src="https://farm6.staticflickr.com/5495/9531519428_6720753201_z.jpg" alt="">
     </a>
-    <a href="https://farm4.staticflickr.com/3698/9528757465_55b2747f2d_c.jpg">
+    <a class="gallery" href="https://farm4.staticflickr.com/3698/9528757465_55b2747f2d_c.jpg">
         <img src="https://farm4.staticflickr.com/3698/9528757465_55b2747f2d_z.jpg" alt="">
     </a>
-    <a href="https://farm4.staticflickr.com/3670/9736190260_d553be4cbe_c.jpg">
+    <a class="gallery" href="https://farm4.staticflickr.com/3670/9736190260_d553be4cbe_c.jpg">
         <img src="https://farm4.staticflickr.com/3670/9736190260_d553be4cbe_z.jpg" alt="">
     </a>
-    <a href="https://farm6.staticflickr.com/5501/9531521704_e006c4eb96_c.jpg">
+    <a class="gallery" href="https://farm6.staticflickr.com/5501/9531521704_e006c4eb96_c.jpg">
         <img src="https://farm6.staticflickr.com/5501/9531521704_e006c4eb96_z.jpg" alt="">
     </a>
-    <a href="https://farm8.staticflickr.com/7352/14066648831_0d7e1a3900_c.jpg">
+    <a class="gallery" href="https://farm8.staticflickr.com/7352/14066648831_0d7e1a3900_c.jpg">
         <img src="https://farm8.staticflickr.com/7352/14066648831_0d7e1a3900_z.jpg" alt="">
     </a>
-    <a href="https://farm4.staticflickr.com/3816/9531525620_5099b17152_c.jpg">
+    <a class="gallery" href="https://farm4.staticflickr.com/3816/9531525620_5099b17152_c.jpg">
         <img src="https://farm4.staticflickr.com/3816/9531525620_5099b17152_z.jpg" alt="">
     </a>
-    <a href="https://farm4.staticflickr.com/3686/11865470554_bbd9687472_c.jpg">
+    <a class="gallery" href="https://farm4.staticflickr.com/3686/11865470554_bbd9687472_c.jpg">
         <img src="https://farm4.staticflickr.com/3686/11865470554_bbd9687472_z.jpg" alt="">
     </a>
 </div>
 
 <script>
-    $('#basicExample2').justifiedGallery({
+    $('#portrait').justifiedGallery({
         rowHeight: 250,
         lastRow: 'nojustify',
         margins: 3
+    });
+
+    $('.gallery').featherlightGallery({
+        gallery: {
+            fadeIn: 300,
+            fadeOut: 300
+        },
+        openSpeed:    300,
+        closeSpeed:   300
     });
 </script>

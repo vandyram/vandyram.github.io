@@ -235,3 +235,6 @@ figure {
     left: 100%;
     margin-left: 15px;
 }
+.featherlight .featherlight-content {
+    background: none !important;
+}
