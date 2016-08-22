@@ -1,0 +1,66 @@
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="images/profile_pic.jpg" class="img-thumbnail" alt="">
+                    <h6 class="display-4 text-xs-center">vandyram</h6>
+                    <h3 class=" cstm text-xs-center">PHOTOGRAPHY</h3>
+                </div>
+            </div>
+            <div class="row sidebar-nav">
+                <div class="">
+                    <ul class='nav'>
+                        <li class="active">
+                            <a ui-sref="home" class="tab ">Home</a>
+                        </li>
+                        <li>
+                            <a ui-sref=".moment"  class="tab ">Moments</a>
+                        </li>
+                        <li>
+                            <a ui-sref=".nature"  class="tab ">Nature</a>
+                        </li>
+                        <li>
+                            <a ui-sref=".portrait"  class="tab ">Portraits</a>
+                        </li>
+                        <li>
+                            <a href="#" >About</a>
+                        </li>
+                        <li>
+                            <a href="#" >Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container">
+                    <p class="subtitle fancy"><span>STAY CONNECTED</span></p>
+                    <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                        <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main mainbar">
+            <div ui-view></div>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    $(".tab").click(function () {
+        $(".tab").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>

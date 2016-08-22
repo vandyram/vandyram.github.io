@@ -14,75 +14,20 @@
 
     <!--custom Stylesheet -->
 
-    <link rel="stylesheet" href="stylesheet/main.css">
 
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-
     <link href="stylesheet/vendor/dashboard.css" rel="stylesheet">
     <link href="http://cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 
     <link rel="stylesheet" href="stylesheet/vendor/justifiedGallery.min.css"/>
-    <base href="/">
+    <link rel="stylesheet" href="stylesheet/main.css">
+
 
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <div class="row">
-                <div class="col-xs-12">
-                    <img src="images/profile_pic.jpg" class="img-thumbnail" alt="">
-                    <h6 class="display-4 text-xs-center">vandyram</h6>
-                    <h3 class=" cstm text-xs-center">PHOTOGRAPHY</h3>
-                </div>
-            </div>
-            <div class="row sidebar-nav">
-                <div class="">
-                    <ul class='nav'>
-                        <li class="active">
-                            <a href="#" class="tab ">Home</a>
-                        </li>
-                        <li>
-                            <a href="moment"  class="tab ">Moments</a>
-                        </li>
-                        <li>
-                            <a href="nature"  class="tab ">Nature</a>
-                        </li>
-                        <li>
-                            <a href="portraits"  class="tab ">Portraits</a>
-                        </li>
-                        <li>
-                            <a href="#" >About</a>
-                        </li>
-                        <li>
-                            <a href="#" >Contact</a>
-                        </li>
+<div ui-view></div>
 
-                    </ul>
-                </div>
-            </div>
-            <footer class="footer">
-                <div class="container">
-                    <p class="subtitle fancy"><span>STAY CONNECTED</span></p>
-                    <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
-                        <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-flickr"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-
-                    </ul>
-                </div>
-            </footer>
-        </div>
-        <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main mainbar">
-            <div ng-view></div>
-        </div>
-    </div>
-
-
-</div>
 
 <!-- /#page-content-wrapper -->
 
@@ -92,6 +37,7 @@
 <script src="javascripts/vendor/bootstrap.js"></script>
 <script src="javascripts/vendor/angular.js"></script>
 <script src="javascripts/vendor/angular-route.js"></script>
+<script src="javascripts/vendor/angular-ui-router.js"></script>
 <script src="javascripts/vendor/angular-resource.js"></script>
 <script src="javascripts/vendor/angular-animate.js"></script>
 <script src="http://cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
@@ -107,6 +53,9 @@
 <script src="javascripts/vendor/jquery.justifiedGallery.min.js"></script>
 
 <script src="javascripts/script.js"></script>
+<script >
+    $('.carousel').carousel();
+</script>
 
 
 </body>
