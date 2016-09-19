@@ -53,10 +53,6 @@ app.config(function ($stateProvider, $urlRouterProvider,$routeProvider) {
     //         templateUrl: "home.html",
     //         controller: "MainController",
     //     })
-    //     .when("/service", {
-    //         templateUrl: "service.html",
-    //         controller: "ServiceController",
-    //     })
     //     .otherwise({redirectTo: "/nature"});
 
 

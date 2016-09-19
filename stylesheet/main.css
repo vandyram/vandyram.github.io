@@ -274,21 +274,21 @@ body,
 }
 .carousel-item:nth-child(1) {
 
-    background: url("../images/bg-1.jpg") no-repeat center center fixed;
+    background: url("../images/bg-1.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .carousel-item:nth-child(2) {
-    background: url("../images/bg-2.jpg") no-repeat center center fixed;
+    background: url("../images/bg-2.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .carousel-item:nth-child(3) {
-    background: url("../images/bg-3.jpg") no-repeat center center fixed;
+    background: url("../images/bg-3.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
