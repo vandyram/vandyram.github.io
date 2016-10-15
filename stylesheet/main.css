@@ -139,8 +139,8 @@ figure {
 }
 
 .footer {
-    position: absolute;
-    bottom: 70px;
+    position: relative;
+    bottom: -11%;
     left: 0;
     width: 99.5%;
     /* Set the fixed height of the footer here */
@@ -163,16 +163,15 @@ figure {
     margin-bottom: 10px;
 }
 
-/*Change icons size here*/
-.social-icons .fa {
-    font-size: 1.3em;
-}
+
+
 /*Change icons circle size and color here*/
 .social-icons .fa {
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
+    font-size: 1.3em;
     color: #FFF;
     color: rgba(255, 255, 255, 0.8);
     -webkit-transition: all 0.3s ease-in-out;
@@ -405,4 +404,44 @@ body,
     transform: skewX(-45deg) translateX(13.5em);
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (min-width:960px){
+    /* styles for browsers larger than 960px; */
+}
+@media only screen and (min-width:1440px) and (max-width: 1599px){
+    /* styles for browsers larger than 1440px; */
+    .social-icons .fa {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 1.1em;
+
+    }
+}
+@media only screen and (min-width:1600px){
+    .social-icons .fa {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 1.1em;
+
+    }
+    /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width:480px){
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media only screen and (device-width:768px){
+    /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
 }
