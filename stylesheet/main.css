@@ -272,8 +272,21 @@ figure {
 
 @media only screen and (min-width:960px){
     /* styles for browsers larger than 960px; */
+    .nav-title{
+        font-size: 2rem;
+    }
+    .nav-subtitle{
+        font-size: 1rem;
+    }
 }
 @media only screen and (min-width:1440px) and (max-width: 1599px){
+
+    .nav-title{
+        font-size: 3.1rem;
+    }
+    .nav-subtitle{
+        font-size: 1.65rem;
+    }
     /* styles for browsers larger than 1440px; */
     .social-icons .fa {
         width: 28px;
@@ -285,6 +298,12 @@ figure {
     }
 }
 @media only screen and (min-width:1600px){
+    .nav-title{
+        font-size: 3.2rem;
+    }
+    .nav-subtitle{
+        font-size: 1.75rem;
+    }
     .social-icons .fa {
         width: 30px;
         height: 30px;
