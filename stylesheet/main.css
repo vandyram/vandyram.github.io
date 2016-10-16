@@ -1,13 +1,27 @@
 /**
- *  Main CSS 
+ *  Main CSS
  *  @author : Ramakrishnan Sathyavageeswaran
  */
-body {
+html{
+    position: relative;
+    min-height: 100%;
+}
 
+body {
+    margin-bottom: 100px;
 }
 
 .wrapper {
     perspective: 1000px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
+    background: #dddddd;
+    z-index: 99999;
 }
 
 .title {
@@ -138,23 +152,14 @@ figure {
     color: #2b2d2f;
 }
 
-.footer {
-    position: relative;
-    bottom: -11%;
-    left: 0;
-    width: 99.5%;
-    /* Set the fixed height of the footer here */
-    height: 50px;
-    line-height: 30px; /* Vertically center the text there */
 
-}
 
 .list-unstyled {
     padding-left: 0;
     list-style: none;
 }
 .footer ul {
-    margin: 10px;
+    text-align: center;
 }
 .list-inline li {
     display: inline-block;
@@ -223,7 +228,7 @@ figure {
     border-bottom: 1px solid #FFEB3B;
     border-top: 1px solid #FFEB3B;
     top: 0;
-    width: 600px;
+    width: 800px;
 }
 .fancy span:before {
     right: 100%;
@@ -238,109 +243,7 @@ figure {
     background: none !important;
 }
 
-.carousel-fade .carousel-inner .carousel-item {
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-}
-.carousel-fade .carousel-inner .carousel-item,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-    opacity: 0;
-}
-.carousel-fade .carousel-inner .active,
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
-}
-.carousel-fade .carousel-inner .next,
-.carousel-fade .carousel-inner .prev,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-    left: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-.carousel-fade .carousel-control {
-    z-index: 2;
-}
-html,
-body,
-.ng-scope,
-.carousel,
-.carousel-inner,
-.carousel-inner .carousel-item {
-    height: 100%;
-}
-.carousel-item:nth-child(1) {
 
-    background: url("../images/bg-1.jpg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(2) {
-    background: url("../images/bg-2.jpg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(3) {
-    background: url("../images/bg-3.jpg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(4) {
-    background: url("../images/bg-4.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(5) {
-    background: url("../images/bg-5.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(6) {
-    background: url("../images/bg-6.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(7) {
-    background: url("../images/bg-7.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(8) {
-    background: url("../images/bg-8.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel-item:nth-child(9) {
-    background: url("../images/bg-9.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.main-text{
-    position: absolute;
-    top: 20%;
-    width: 96.66666666666666%;
-    color: #FFF;
-}
 
 
 
@@ -365,46 +268,7 @@ body,
     }
 }
 
-.button {
-    padding: 0.75em 2em;
-    text-align: center;
-    text-decoration: none;
-    color: #2194E0;
-    border: 2px solid #2194E0;
-    font-size: 24px;
-    display: inline-block;
-    border-radius: 0.3em;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    background: none;
-}
-.button:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    -webkit-transform: skewX(-45deg) translateX(0);
-    transform: skewX(-45deg) translateX(0);
-    -webkit-transition: none;
-    transition: none;
-}
-.button:hover {
-    background-color: #2194E0;
-    color: #fff;
-    border-bottom: 4px solid #1977b5;
-}
-.button:hover:before {
-    -webkit-transform: skewX(-45deg) translateX(13.5em);
-    transform: skewX(-45deg) translateX(13.5em);
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
+
 
 @media only screen and (min-width:960px){
     /* styles for browsers larger than 960px; */

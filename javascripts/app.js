@@ -4,7 +4,7 @@
  * @author Ramakrishnan Sathyavgeeswaran.
  */
 
-var app = angular.module("VandyPhotography", ["ngRoute","ui.router"]);
+var app = angular.module("VandyPhotography", ["ngRoute","ui.router","uiRouterStyles"]);
 
 app.config(function ($stateProvider, $urlRouterProvider,$routeProvider) {
     $urlRouterProvider.otherwise('/photos/nature');
@@ -12,12 +12,22 @@ app.config(function ($stateProvider, $urlRouterProvider,$routeProvider) {
         .state('home',{
             url:'/home',
             templateUrl:'home.html',
-            controller: "MainController"
+            controller: "MainController",
+            data: {
+                css: ['stylesheet/index.css',
+
+                ]
+            }
 
         })
         .state('photos',{
             url:'/photos',
-            templateUrl:'photos.html'
+            templateUrl:'photos.html',
+            data: {
+                css: ['stylesheet/main.css',
+
+                    ]
+            }
         })
         .state('photos.nature',{
             url:'/nature',
