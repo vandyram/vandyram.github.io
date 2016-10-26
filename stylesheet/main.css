@@ -8,7 +8,7 @@ html{
 }
 
 body {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
 .wrapper {
@@ -19,11 +19,14 @@ body {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 130px;
-    background: #dddddd;
+    height: 90px;
+    background: rgba(255, 235, 59, 0.81);
     z-index: 99999;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
-
+.footer p {
+    margin-top: 8px;
+}
 .title {
     font-family: 'Advent Pro', sans-serif;
     font-weight: 600;
