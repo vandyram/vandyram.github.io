@@ -27,6 +27,11 @@ body {
 .footer p {
     margin-top: 8px;
 }
+.about-content{
+    line-height: 2em;
+    font-size: 1.3em;
+    padding-bottom: 3%;
+}
 .title {
     font-family: 'Advent Pro', sans-serif;
     font-weight: 600;
@@ -40,6 +45,24 @@ body {
     height: 100%;
 }
 
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+    padding-left: 3%;
+    font-size: 1em;
+
+
+}
+.navbar-nav > a {
+    float: none;
+    display: inline-block;
+}
+.bg-faded{
+    background: #FFEB3B;
+}
+.navbar{
+    z-index: 199999;
+}
 .nav-bar {
     font-family: 'Advent Pro', sans-serif;
     font-weight: 600;
@@ -115,29 +138,6 @@ figure {
     left: 20px;
 }
 
-.nav li:nth-child(1) a:before {
-    content: '\f015';
-}
-
-.nav li:nth-child(2) a:before {
-    content: '\f03e';
-}
-
-.nav li:nth-child(3) a:before {
-    content: '\f03e';
-}
-
-.nav li:nth-child(4) a:before {
-    content: '\f03e';
-}
-
-.nav li:nth-child(5) a:before {
-    content: '\f007';
-}
-
-.nav li:nth-child(6) a:before {
-    content: '\f095';
-}
 
 .nav li a:hover {
     background: #dddddd;
@@ -270,7 +270,39 @@ figure {
         transform: skewY(-45deg) translateX(12.5em);
     }
 }
+@media only screen and (max-width: 766px){
+    .about-content{
+        font-size: .8em;
+    }
+    .blockquote .display-4{
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (min-width:767px) and (max-width: 992px){
 
+    .img-thumbnail {
+        width: 100px;
+    }
+    .nav-title{
+        font-size: 1.6em;
+        text-align: left !important;
+    }
+    .nav-subtitle{
+        font-size: .8em;
+    }
+    .nav li a {
+        padding-left: 10px;
+    }
+    .about-content{
+        font-size: 1em;
+    }
+    .blockquote .display-4{
+        font-size: 2rem;
+    }
+    .mainbar{
+        z-index: 999999;
+    }
+}
 
 
 @media only screen and (min-width:960px){
@@ -280,6 +312,9 @@ figure {
     }
     .nav-subtitle{
         font-size: 1rem;
+    }
+    .about-content{
+        padding-bottom: 1%;
     }
 }
 @media only screen and (min-width:1440px) and (max-width: 1599px){
@@ -313,6 +348,17 @@ figure {
         line-height: 30px;
         text-align: center;
         font-size: 1.1em;
+
+    }
+    .nav li a {
+        font-size: 1em;
+    }
+
+
+
+    .about-content{
+        font-size: 1.8em;
+        padding-bottom: 3%;
 
     }
     /* for sumo sized (mac) screens */

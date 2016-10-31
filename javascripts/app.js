@@ -9,25 +9,29 @@ var app = angular.module("VandyPhotography", ["ngRoute","ui.router","uiRouterSty
 app.config(function ($stateProvider, $urlRouterProvider,$routeProvider) {
     $urlRouterProvider.otherwise('/photos/nature');
     $stateProvider
+
         .state('home',{
             url:'/home',
             templateUrl:'home.html',
             controller: "MainController",
             data: {
                 css: ['stylesheet/index.css',
-
                 ]
             }
-
         })
         .state('photos',{
             url:'/photos',
             templateUrl:'photos.html',
             data: {
                 css: ['stylesheet/main.css',
-
                     ]
             }
+        })
+        .state('photos.about',{
+            url:'/about',
+            templateUrl:'partials/about.html',
+            controller: "AboutController",
+
         })
         .state('photos.nature',{
             url:'/nature',
